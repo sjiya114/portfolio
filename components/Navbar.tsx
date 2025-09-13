@@ -18,7 +18,7 @@ function Navbar() {
      <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#contact">Contact</Link></Button>
       </div>
        <div  className='flex flex-row font-bold space-x-6'>
-         <WrapButton children="Resume"/>
+         <WrapButton>Resume</WrapButton>
       </div> 
     </div>
          {/* // mobile view */}
@@ -35,7 +35,7 @@ function Navbar() {
      <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/">Contact</Link></Button>
       </ul> 
       <div  className='flex flex-row max-md:mt-4 max-md:space-y-4  max-md:flex-col font-bold space-x-6'>
-         <WrapButton children="Resume"/>
+         <WrapButton>Resume</WrapButton>
       </div> </>
 }            
              </div> 

@@ -23,7 +23,7 @@ function ProjectPage() {
   }, [dataParam]);
   return (
     <>
-    <div className='px-4  text-white my-20 mt-20 pt-20  max-sm:mx-4'>
+    <div className='px-4 pt-20 text-white my-20 mt-20  max-sm:mx-4'>
                 
                     <h1 className='text-4xl text-center mb-20 font-semibold'>{information.name}</h1>
                 

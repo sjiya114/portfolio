@@ -13,6 +13,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.6",
     "@react-spring/web": "^10.0.1",
+    "axios": "^1.12.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
@@ -21,6 +22,7 @@
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
     "react-wrap-balancer": "^1.1.1",
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.3.1"

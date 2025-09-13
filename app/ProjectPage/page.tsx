@@ -2,12 +2,20 @@
 import { useState,useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+interface ProjectData {
+  name: string;
+  images: string[];
+  description: string;
+  github: string;
+  live: string;
+  techStack: string[];
+}
 
 function ProjectPage() {
  const searchParams = useSearchParams();
   const dataParam = searchParams.get("data");
 
-  const [information, setInformation] = useState<any>({});
+ const [information, setInformation] = useState<ProjectData | null>(null);
   const [mainImage, setMainImage] = useState<string>("");
 
   useEffect(() => {
@@ -25,7 +33,7 @@ function ProjectPage() {
     <>
     <div className='px-4 pt-20 text-white my-20 mt-20  max-sm:mx-4'>
                 
-                    <h1 className='text-4xl text-center mb-20 font-semibold'>{information.name}</h1>
+                    <h1 className='text-4xl text-center mb-20 font-semibold'>{information?.name}</h1>
                 
                 <div className='flex max-lg:flex-col flex-row justify-center items-center  space-x-10 space-y-6'>
                     <div>
@@ -41,15 +49,15 @@ function ProjectPage() {
                 </div>
                 <div className='flex flex-col max-w-screen-xl mx-auto justify-between space-y-2  mt-4'>
                     <h1 className=' text-2xl font-semibold'>Description</h1>
-                    <Link href={information.description || ""}> {information.description} </Link>
+                    <Link href={information?.description || ""}> {information?.description} </Link>
                 </div>
                 <div className='flex flex-col max-w-screen-xl mx-auto justify-between mt-4'>
                     <h1 className=' text-2xl font-semibold'>Github Link</h1>
-                    <Link href={information.github || ""}>{information.github}</Link>
+                    <Link href={information?.github || ""}>{information?.github}</Link>
                 </div>
                 <div className='flex flex-col max-w-screen-xl mx-auto justify-between mt-4'>
                     <h1 className=' text-2xl font-semibold'>Live Link</h1>
-                    <Link href={information.live || ""} >{information.live}</Link>
+                    <Link href={information?.live || ""} >{information?.live}</Link>
                 </div>
                  
                 <div className='flex flex-row flex-wrap  space-x-10 max-w-screen-xl mt-4 mx-auto'>

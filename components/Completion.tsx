@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
 import {animated,useSpring} from '@react-spring/web';
 interface NumberProp{
-n:Number
+n:number
 }
 const NumberN:React.FC<NumberProp>=({n})=>
 {

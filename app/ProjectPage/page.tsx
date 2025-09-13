@@ -1,5 +1,5 @@
 "use client";
-import { useState,useEffect } from 'react';
+import { useState,Suspense,useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 interface ProjectData {
@@ -11,7 +11,7 @@ interface ProjectData {
   techStack: string[];
 }
 
-function ProjectPage() {
+function ProjectPageClient() {
  const searchParams = useSearchParams();
   const dataParam = searchParams.get("data");
 
@@ -72,4 +72,10 @@ function ProjectPage() {
   )
 }
 
-export default ProjectPage
+export default function ProjectPage() {
+  return (
+    <Suspense fallback={<p className="text-center mt-10">Loading project...</p>}>
+      <ProjectPageClient />
+    </Suspense>
+  );
+}

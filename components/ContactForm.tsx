@@ -14,11 +14,11 @@ export default function ContactForm() {
    PhoneNumber:"",
    Email:""
   })
-  const onChangeHandler=(e)=>
+  const onChangeHandler=(e:React.ChangeEvent<HTMLInputElement>)=>
   {
     setData({...data,[e.target.name]:e.target.value});
   }
-  const handleSubmit=async(e)=>
+  const handleSubmit=async(e:React.FormEvent<HTMLFormElement>)=>
   {
      e.preventDefault();
      const formData=new FormData();
@@ -83,7 +83,7 @@ export default function ContactForm() {
               <input
                 id="first-name"
                 name="FirstName"
-                onChange={(e)=>{onChangeHandler(e)}}
+                onChange={onChangeHandler}
                 type="text"
                 autoComplete="given-name"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
@@ -98,7 +98,7 @@ export default function ContactForm() {
               <input
                 id="last-name"
                 name="LastName"
-                onChange={(e)=>{onChangeHandler(e)}}
+                onChange={onChangeHandler}
                 type="text"
                 autoComplete="family-name"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
@@ -113,7 +113,7 @@ export default function ContactForm() {
               <input
                 id="email"
                 name="Email"
-                onChange={(e)=>{onChangeHandler(e)}}
+                onChange={onChangeHandler}
                 type="email"
                 autoComplete="email"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
@@ -130,7 +130,7 @@ export default function ContactForm() {
                   id="phone-number"
                   name="PhoneNumber"
                   type="text"
-                  onChange={(e)=>{onChangeHandler(e)}}
+                  onChange={onChangeHandler}
                   placeholder="123-456-7890"
                   className="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"
                 />
@@ -145,7 +145,7 @@ export default function ContactForm() {
               <textarea
                 id="message"
                 name="Message"
-                onChange={(e)=>{onChangeHandler(e)}}
+                onChange={onChangeHandler}
                 rows={4}
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
                 defaultValue={''}

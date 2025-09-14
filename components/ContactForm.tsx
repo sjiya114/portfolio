@@ -14,7 +14,7 @@ export default function ContactForm() {
    PhoneNumber:"",
    Email:""
   })
-  const onChangeHandler=(e:React.ChangeEvent<HTMLInputElement>)=>
+  const onChangeHandler=(  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>
   {
     setData({...data,[e.target.name]:e.target.value});
   }

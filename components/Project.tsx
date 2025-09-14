@@ -146,7 +146,12 @@ import { AppContext } from '@/app/context/AppContext';
 // import { AppContext } from "../../context/AppContext";
 
 export default function ProjectsSection() {
-  const { projects } = useContext(AppContext);
+ const context = useContext(AppContext);
+if (!context) {
+  throw new Error("AppContext not found. Wrap your app with <AppContextProvider>");
+}
+const { projects } = context;
+
 
   if (!projects) return <p className="text-center mt-20 text-white">Loading projects...</p>;
 

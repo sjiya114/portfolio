@@ -21,7 +21,7 @@ export default function ContactForm() {
   const handleSubmit=async(e)=>
   {
      e.preventDefault();
-     let formData=new FormData();
+     const formData=new FormData();
      formData.append("FirstName",data.FirstName);
      formData.append("LastName",data.LastName);
      formData.append("Message",data.Message);

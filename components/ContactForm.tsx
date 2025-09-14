@@ -35,7 +35,10 @@ export default function ContactForm() {
       if(res.data.success)
       {
          toast.success("form submitted successfully");
-         document.getElementById("form").reset();
+         const form = document.getElementById("form") as HTMLFormElement | null;
+if (form) {
+  form.reset();
+}
       }
       else{
         console.log("error");

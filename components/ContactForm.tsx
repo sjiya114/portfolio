@@ -3,6 +3,7 @@ import { ChevronDownIcon,PhoneCall,Mail } from 'lucide-react';
 import axios from 'axios';
 import { useState } from 'react';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 
 export default function ContactForm() {
@@ -26,21 +27,15 @@ export default function ContactForm() {
      formData.append("Message",data.Message);
      formData.append("Email",data.Email);
      formData.append("PhoneNumber",data.PhoneNumber);
-     formData.append("access_key","49baf150-b86e-46f4-8511-38af61de8664");
+    formData.append("access_key", process.env.NEXT_PUBLIC_ACCESS_KEY || "");
+
      try {
-      const res=await axios.post("https://api.web3forms.com/submit",formData, {headers: {
-                "Content-Type":"application/json"
-            }});
+      const res=await axios.post("https://api.web3forms.com/submit",formData);
+      console.log(res);
       if(res.data.success)
       {
-         console.log("form submitted successfully");
-         setData({
-          Email:"",
-          FirstName:"",
-          LastName:"",
-          Message:"",
-          PhoneNumber:""
-         })
+         toast.success("form submitted successfully");
+         document.getElementById("form").reset();
       }
       else{
         console.log("error");
@@ -77,7 +72,7 @@ export default function ContactForm() {
           className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-288.75"
         />
       </div>
-      <form onSubmit={handleSubmit} encType='form-data' method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form id="form" onSubmit={handleSubmit} encType='form-data' method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

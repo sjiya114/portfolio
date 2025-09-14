@@ -8,7 +8,7 @@ function Navbar() {
   const [hidden,setHidden]=useState(true);
   return (
     <>
-      <div className='text-white fixed left-0 right-0 top-0 z-[1] bg-[#0D0910] max-md:hidden flex flex-row shadow-2xl shadow-zinc-600  px-4 py-2 mt-6 border-t-1  border-gray-400 rounded-4xl justify-between items-center  '   >
+      <div className='text-white fixed left-0 right-0 top-0 z-50 bg-[#0D0910] max-md:hidden flex flex-row shadow-2xl shadow-zinc-600  px-4 py-2 mt-6 border-t-1  border-gray-400 rounded-4xl justify-between items-center  '   >
       <PersonStanding className='w-14 h-14' color='white' />
       <div className='flex flex-row font-bold  font-stretch-extra-expanded   space-x-10'  >
       <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/">Home</Link></Button>
@@ -18,7 +18,7 @@ function Navbar() {
      <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#contact">Contact</Link></Button>
       </div>
        <div  className='flex flex-row font-bold space-x-6'>
-         <a  href='/ibm_certificate.pdf' download={true} ><WrapButton  >Resume</WrapButton></a>
+         <a   href='/jiya_updatedresume.pdf' download={true} ><WrapButton  >Resume</WrapButton></a>
       </div> 
     </div>
          {/* // mobile view */}

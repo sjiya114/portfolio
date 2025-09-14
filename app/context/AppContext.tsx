@@ -1,7 +1,33 @@
-"use client"
-import { createContext, useState } from "react"
-export const AppContext=createContext();
-function AppContextProvider({children}) {
+"use client";
+
+import { createContext, useState, ReactNode } from "react";
+
+// 1️⃣ Type for a single project
+export interface ProjectData {
+  ide: number;
+  name: string;
+  images: string[];
+  description: string;
+  github: string;
+  live: string;
+  techStack: string[];
+}
+
+// 2️⃣ Type for context value
+interface AppContextType {
+  projects: ProjectData[];
+  setProjects: (projects: ProjectData[]) => void;
+}
+
+// 3️⃣ Create typed context
+export const AppContext = createContext<AppContextType | undefined>(undefined);
+
+// 4️⃣ Provider component
+interface AppContextProviderProps {
+  children: ReactNode;
+}
+
+function AppContextProvider({ children }: AppContextProviderProps) {
      const projectData=[{
     name:"Prescripto:An Appointment Booking Site",
     ide:1,
@@ -94,10 +120,9 @@ function AppContextProvider({children}) {
 
   }
 ]
-    const [projects,setProjects]=useState(projectData);
-    const values={projects,setProjects};
+    const [projects, setProjects] = useState<ProjectData[]>(projectData);
   return (
-    <AppContext.Provider value={values}  >
+    <AppContext.Provider value={{ projects, setProjects }}  >
         {children}
     </AppContext.Provider>
   )

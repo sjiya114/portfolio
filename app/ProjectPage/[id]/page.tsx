@@ -19,7 +19,11 @@ interface ProjectData {
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const { projects } = useContext(AppContext);
+  const context = useContext(AppContext);
+if (!context) {
+  throw new Error("AppContext not found. Wrap your app with <AppContextProvider>");
+}
+const { projects } = context;
   const {id}=use(params);
   const [currProject, setCurrProject] = useState<ProjectData | null>(null);
   const [mainImage, setMainImage] = useState<string>("");

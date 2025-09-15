@@ -46,7 +46,7 @@ const { projects } = context;
                 
                 <div className='flex max-lg:flex-col flex-row justify-center items-center  space-x-10 space-y-6'>
                     <div>
-                        <img src={mainImage || "/p1.png"} className='w-[40vw] h-[40vh] max-lg:w-[500px]  max-sm:w-[100%] max-sm:h-[90%]   max-lg:h-[40vh] rounded-lg' alt="" />
+                        <img src={mainImage || "/p1.png"} className='w-[40vw] h-[40vh] max-lg:w-[500px]  max-sm:w-[100%] max-sm:h-[90%]   max-lg:h-[300px] rounded-lg' alt="" />
                     </div>
                     <div className='flex flex-row  flex-wrap max-sm:flex-col  space-y-4 space-x-10'>
                         {currProject?.images && currProject.images.length>0 && currProject?.images.map((image,index) => (

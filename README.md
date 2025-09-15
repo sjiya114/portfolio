@@ -1,8 +1,6 @@
 
 
 <div align="center">
-  <img src="./public/pro.png" alt="Portfolio Banner" width="200"/>
-  
   <h1>🚀 Portfolio Website</h1>
   <p>A modern, responsive portfolio built with <b>Next.js</b> & <b>TypeScript</b></p>
   

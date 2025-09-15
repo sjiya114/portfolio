@@ -38,17 +38,6 @@ const { projects } = context;
       setMainImage(found.images?.[0] || "");
     }
   }, [projects,id]);
-  // useEffect(() => {
-  //   if (dataParam) {
-  //     try {
-  //       const parsed = JSON.parse(decodeURIComponent(dataParam));
-  //       setcurrProject(parsed);
-  //       setMainImage(parsed.images?.[0] || "");
-  //     } catch (error) {
-  //       console.error("Error parsing project data:", error);
-  //     }
-  //   }
-  // }, [dataParam]);
   return (
     <>
     <div className='px-4 pt-20 text-white my-20 mt-20  max-sm:mx-4'>
@@ -57,12 +46,12 @@ const { projects } = context;
                 
                 <div className='flex max-lg:flex-col flex-row justify-center items-center  space-x-10 space-y-6'>
                     <div>
-                        <img src={mainImage || "/p1.png"} className='w-[40vw] h-[40vh] max-lg:w-[36vw]  max-sm:w-[100%] max-sm:h-[90%]   max-lg:h-[40vh] rounded-lg' alt="" />
+                        <img src={mainImage || "/p1.png"} className='w-[40vw] h-[40vh] max-lg:w-[500px]  max-sm:w-[100%] max-sm:h-[90%]   max-lg:h-[40vh] rounded-lg' alt="" />
                     </div>
                     <div className='flex flex-row  flex-wrap max-sm:flex-col  space-y-4 space-x-10'>
                         {currProject?.images && currProject.images.length>0 && currProject?.images.map((image,index) => (
                             <div key={index}>
-                                <img src={image} onClick={(e) => { setMainImage(image) }} className='w-[20vw] h-[24vh] max-lg:w-[36vw] hover:border-orange-500 hover:border-2  max-sm:w-[80%] max-sm:h-[70%]   max-lg:h-[40vh] rounded-lg' alt="" />
+                                <img src={image} onClick={(e) => { setMainImage(image) }} className='w-[20vw] h-[24vh] max-lg:w-[300px] hover:border-orange-500 hover:border-2  max-sm:w-[80%] max-sm:h-[70%]   max-lg:h-[200px] rounded-lg' alt="" />
                             </div>
                         ))}
                     </div>
@@ -91,11 +80,3 @@ const { projects } = context;
         </>
   )
 }
-
-// export default function ProjectPage() {
-//   return (
-//     <Suspense fallback={<p className="text-center mt-10">Loading project...</p>}>
-//       <ProjectPageClient />
-//     </Suspense>
-//   );
-// }

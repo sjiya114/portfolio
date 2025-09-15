@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import {Toaster} from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import AppContextProvider from "./context/AppContext";
 import Footer from "@/components/Footer";
 export const metadata: Metadata = {
@@ -20,10 +20,10 @@ export default function RootLayout({
         className={`bg-black`}
       >
         <AppContextProvider>
-        <Toaster/>
-        <Navbar/>
-        {children}
-        <Footer/>
+          <Toaster />
+          <Navbar />
+          {children}
+          <Footer />
         </AppContextProvider>
       </body>
     </html>

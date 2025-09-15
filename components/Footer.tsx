@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 export default function Footer() {
     return (
-        <>  
+        <>
             <footer className="flex flex-col bg-black text-white    items-center justify-around w-full py-16 text-sm">
                 <div className="flex items-center gap-4 mt-8 text-indigo-500">
                     <Link href="https://leetcode.com/u/sjiya2004/" className="hover:-translate-y-0.5 transition-all duration-300">

@@ -13,9 +13,9 @@ function Navbar() {
         <div className='flex flex-row font-bold  font-stretch-extra-expanded   space-x-10'  >
           <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/">Home</Link></Button>
           <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/About">About</Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#skills">Skills </Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#projects">Projects</Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#contact">Contact</Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#skills">Skills </Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#projects">Projects</Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#contact">Contact</Link></Button>
         </div>
         <div className='flex flex-row font-bold space-x-6'>
           <a href='/jiya_updatedresume.pdf' download={true} ><WrapButton  >Resume</WrapButton></a>
@@ -30,10 +30,10 @@ function Navbar() {
         </div>
         {!hidden && <> < ul className='flex flex-col   items-center space-y-4 font-bold text-xl'>
           <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/">Home</Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#skills">Skills </Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#skills">Skills </Link></Button>
           <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/About">About </Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#projects">Projects</Link></Button>
-          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="#contact">Contact</Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#projects">Projects</Link></Button>
+          <Button asChild variant="ghost" className="hover:bg-white/10"><Link href="/#contact">Contact</Link></Button>
         </ul>
           <div className='flex flex-row max-md:mt-4 max-md:space-y-4  max-md:flex-col font-bold space-x-6'>
             <a href='/jiya_updatedresume.pdf' download={true} ><WrapButton  >Resume</WrapButton></a>

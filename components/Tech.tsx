@@ -102,9 +102,9 @@ function Tech() {
                 ))}
             </motion.div>
         </div>
-        <div id='skills' className=' bg-gradient-to-r from-zinc-600 to-zinc-200 ' >
+        <div id='skills' className='md:hidden  bg-gradient-to-r from-zinc-600 to-zinc-200 ' >
         <h1 className='text-6xl font-bold font-[poppins] text-center mt-6 pt-20 mask-r-from-0.5 text-shadow-2xs '>Technology Stack</h1>
-        <div  className='grid grid-cols-4 gap-4 max-[500px]:grid-cols-3 max-[380px]:grid-cols-2  md:hidden mt-20 mb-20 pt-5 pb-10 pr-4 pl-4 space-y-10'>
+        <div  className='grid grid-cols-4 gap-4 max-[500px]:grid-cols-3 max-[380px]:grid-cols-2   mt-20 mb-20 pt-5 pb-10 pr-4 pl-4 space-y-10'>
              
             {data1.map((d1, index) => (
                     <div key={index} className='flex flex-col shadow-black shadow-md justify-center bg-white items-center text-white hover:text-black border-2 hover:border-2 border-gray-400 px-8 py-5 rounded-2xl hover:rounded-full  space-y-2'>

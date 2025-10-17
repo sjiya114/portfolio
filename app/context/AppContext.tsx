@@ -102,8 +102,8 @@ function AppContextProvider({ children }: AppContextProviderProps) {
     ide: 5,
     images: ['/p5.png', '/p55.png'],
     description: "GLOBAL Reviews is an interactive platform where users can post and explore genuine reviews about products and services. It includes features like an admin approval system to ensure authenticity, search and filter options for quick access to relevant reviews, automatic timestamps for transparency, and a dynamic section highlighting the latest reviews to keep the platform updated and engaging.",
-    github: "https://github.com/sjiya114/Minor_Project",
-    live: "",
+    github: "https://github.com/sjiya114/Know-your-product",
+    live: "https://global-review-frontend.vercel.app/",
     techStack: [
       "React.js",
       "Bootstrap",

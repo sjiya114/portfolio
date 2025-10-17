@@ -43,7 +43,7 @@ function Completion() {
             {data.map((d, index) =>
                 <motion.div key={index} initial={{ scale: 0.9 }} whileInView={{ scale: 1, transition: { duration: 1, repeat: Infinity } }} className="flex flex-col space-y-2 justify-center items-center">
                     <button className="px-2 py-2 w-30 h-30 hover:shadow-md hover:shadow-white hover:bg-black hover:text-white hover:border-2 hover:border-white hover:scale-108 rounded-full bg-white text-black">
-                        <NumberN n={d.quantity} />
+                        <NumberN n={d.quantity} />+
                     </button>
                     <span className="text-white text-3xl">{d.text}</span>
                 </motion.div>
